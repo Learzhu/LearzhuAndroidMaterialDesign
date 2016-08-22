@@ -65,17 +65,16 @@ public class ForegroundActivity extends AppCompatActivity {
 
         public ForegroundTextView(Context context, AttributeSet attrs, int defStyleAttr) {
             super(context, attrs, defStyleAttr);
-            final TypedArray array = context.obtainStyledAttributes(attrs, R.styleable.ForegroundLinearLayout, defStyleAttr, 0);
+            final TypedArray array = context.obtainStyledAttributes(attrs, R.styleable.ForegroundLayout, defStyleAttr, 0);
+//            final TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.ForegroundLayout, defStyle, 0);
 //            <declare-styleable name="ForegroundLinearLayout">
 //            <attr name="android:foreground"/>
 //            <attr name="android:foregroundGravity"/>
 //            <attr format="boolean" name="foregroundInsidePadding"/>
 //            </declare-styleable>
-
             final Drawable drawable = array.getDrawable(R.styleable.ForegroundLayout_foreground);
             foregroundPadding = array.getBoolean(R.styleable.ForegroundLayout_foregroundInsidePadding, false);
             backgroundAsForeground = array.getBoolean(R.styleable.ForegroundLayout_backgroundAsForeground, false);
-
 
             // Apply foreground padding for ninepatches automatically
             if (!foregroundPadding && getBackground() instanceof NinePatchDrawable) {

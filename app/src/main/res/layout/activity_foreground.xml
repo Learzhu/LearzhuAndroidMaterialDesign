@@ -35,4 +35,17 @@
             android:text="foreground" />
     </FrameLayout>
 
+    <com.learzhu.learzhuandroidmaterialdesign.views.foreground.ForegroundTextView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:foreground="@color/black15"
+        android:gravity="center"
+        android:text="XXXZX" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:foreground="@color/black15"
+        android:text="YYY" />
 </RelativeLayout>

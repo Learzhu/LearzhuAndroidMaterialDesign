@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/cardview_dark_background" />
+    <size android:height="2dp" />
+    <!--layout垂直采用，下面是水平分割线采用-->
+    <!--必须有 否则无效-->
+    <!--使用shape的时候一定要添加<size> ，一定要添加color，即使是透明也要写上-->
+    <!--<size android:width="2dp" />-->
+</shape>

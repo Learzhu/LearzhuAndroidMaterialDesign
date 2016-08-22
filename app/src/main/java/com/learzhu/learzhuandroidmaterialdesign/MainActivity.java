@@ -1,5 +1,6 @@
 package com.learzhu.learzhuandroidmaterialdesign;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -27,6 +28,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.learzhu.learzhuandroidmaterialdesign.views.foreground.ForegroundActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -110,6 +113,9 @@ public class MainActivity extends AppCompatActivity {
                 mDrawerLayout.openDrawer(GravityCompat.START);
                 return true;
             case R.id.action_setting:
+                /*点击右上角的setting 跳转到 Activity*/
+                Intent intent = new Intent(MainActivity.this, ForegroundActivity.class);
+                startActivity(intent);
                 return true;
         }
         return super.onOptionsItemSelected(item);

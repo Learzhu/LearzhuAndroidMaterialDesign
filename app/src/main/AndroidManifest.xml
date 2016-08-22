@@ -20,6 +20,8 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
+        <activity android:name=".views.divider.DividerActivity" />
+        <activity android:name=".views.foreground.ForegroundActivity"></activity>
     </application>
 
 </manifest>

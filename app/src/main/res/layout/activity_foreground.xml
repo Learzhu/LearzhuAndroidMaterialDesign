@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.foreground.ForegroundActivity">
+
+    <!--方法一 前景色 透明度-->
+    <!--<FrameLayout-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerInParent="true"-->
+    <!--android:foreground="@color/colorAccentAlpha"-->
+    <!--android:foregroundTintMode="src_in">-->
+
+    <!--<TextView-->
+    <!--android:layout_width="100dp"-->
+    <!--android:layout_height="100dp"-->
+    <!--android:gravity="center_horizontal|center_vertical"-->
+    <!--android:text="foreground" />-->
+    <!--</FrameLayout>-->
+    <!--方法二  selector-->
+    <FrameLayout
+        android:id="@+id/framelayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:foreground="@drawable/selector_foreground"
+        android:foregroundTintMode="src_in">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="foreground" />
+    </FrameLayout>
+
+</RelativeLayout>

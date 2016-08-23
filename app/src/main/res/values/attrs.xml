@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <declare-styleable name="ForegroundLayout">
-        <attr name="foreground" format="reference" />
-        <attr name="foregroundGravity" />
-        <attr name="foregroundInsidePadding" format="boolean" />
-        <attr name="backgroundAsForeground" format="boolean" />
-    </declare-styleable>
+    <!--<declare-styleable name="ForegroundLayout1">-->
+        <!--<attr name="foreground" format="reference" />-->
+        <!--<attr name="foregroundGravity" />-->
+        <!--<attr name="foregroundInsidePadding" format="boolean" />-->
+        <!--<attr name="backgroundAsForeground" format="boolean" />-->
+    <!--</declare-styleable>-->
 </resources>

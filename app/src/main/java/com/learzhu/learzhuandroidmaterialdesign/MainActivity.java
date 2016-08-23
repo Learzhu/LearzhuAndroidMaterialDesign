@@ -60,6 +60,10 @@ public class MainActivity extends AppCompatActivity {
                 menuItem.setChecked(true);
                 mDrawerLayout.closeDrawers();
                 Toast.makeText(MainActivity.this, menuItem.getTitle(), Toast.LENGTH_LONG).show();
+                if ("ForegroundActivity".equals(menuItem.getTitle())) {
+                    Intent intent = new Intent(MainActivity.this, ForegroundActivity.class);
+                    startActivity(intent);
+                }
                 return true;
             }
         });

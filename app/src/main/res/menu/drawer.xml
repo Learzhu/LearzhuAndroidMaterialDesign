@@ -14,14 +14,21 @@
             android:id="@+id/navigation_item_location"
             android:icon="@drawable/ic_attachment"
             android:title="@string/nav_item_location" />
+
+        <item
+            android:id="@+id/navigation_item_foreground"
+            android:icon="@drawable/ic_attachment"
+            android:title="@string/nav_item_foreground" />
     </group>
 
     <item android:title="@string/nav_sub_menu">
         <menu>
-            <item android:icon="@drawable/ic_emoticon"
-                android:title="@string/nav_sub_menu_item01"/>
-            <item android:icon="@drawable/ic_emoticon"
-                android:title="@string/nav_sub_menu_item02"/>
+            <item
+                android:icon="@drawable/ic_emoticon"
+                android:title="@string/nav_sub_menu_item01" />
+            <item
+                android:icon="@drawable/ic_emoticon"
+                android:title="@string/nav_sub_menu_item02" />
         </menu>
     </item>
 </menu>

@@ -45,16 +45,28 @@ public class ForegroundTextView extends TextView {
 
     public ForegroundTextView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-        final TypedArray array = context.obtainStyledAttributes(attrs, R.styleable.ForegroundLayout, defStyleAttr, 0);
+        final TypedArray array = context.obtainStyledAttributes(attrs, R.styleable.ForegroundLinearLayout, defStyleAttr, 0);
+
 //            final TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.ForegroundLayout, defStyle, 0);
 //            <declare-styleable name="ForegroundLinearLayout">
 //            <attr name="android:foreground"/>
 //            <attr name="android:foregroundGravity"/>
 //            <attr format="boolean" name="foregroundInsidePadding"/>
 //            </declare-styleable>
-        final Drawable drawable = array.getDrawable(R.styleable.ForegroundLayout_foreground);
-        foregroundPadding = array.getBoolean(R.styleable.ForegroundLayout_foregroundInsidePadding, false);
-        backgroundAsForeground = array.getBoolean(R.styleable.ForegroundLayout_backgroundAsForeground, false);
+
+//        <declare-styleable name="ForegroundLayout">
+//        <attr format="reference" name="foreground"/>
+//        <attr name="foregroundGravity"/>
+//        <attr format="boolean" name="foregroundInsidePadding"/>
+//        <attr format="boolean" name="backgroundAsForeground"/>
+//        </declare-styleable>
+//        final Drawable drawable = array.getDrawable(R.styleable.ForegroundLayout_foreground);
+//        foregroundPadding = array.getBoolean(R.styleable.ForegroundLayout_foregroundInsidePadding, false);
+//        backgroundAsForeground = array.getBoolean(R.styleable.ForegroundLayout_backgroundAsForeground, false);
+
+        final Drawable drawable = array.getDrawable(R.styleable.ForegroundLinearLayout_android_foreground);
+        foregroundPadding = array.getBoolean(R.styleable.ForegroundLinearLayout_foregroundInsidePadding, false);
+        backgroundAsForeground = array.getBoolean(R.styleable.ForegroundLinearLayout_foregroundInsidePadding, false);
 
         // Apply foreground padding for ninepatches automatically
         if (!foregroundPadding && getBackground() instanceof NinePatchDrawable) {
@@ -143,16 +155,12 @@ public class ForegroundTextView extends TextView {
     @Override
     public void draw(Canvas canvas) {
         super.draw(canvas);
-
         if (foreground != null) {
             final Drawable foreground = this.foreground;
-
             if (foregroundBoundsChanged) {
                 foregroundBoundsChanged = false;
-
                 final int w = getRight() - getLeft();
                 final int h = getBottom() - getTop();
-
                 if (foregroundPadding) {
                     foreground.setBounds(rectPadding.left, rectPadding.top, w - rectPadding.right, h - rectPadding.bottom);
                 } else {
